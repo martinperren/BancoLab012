@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lytContenedor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView android:id="@+id/tvCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblMail"/>
+
+    <EditText android:id="@+id/edtMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"/>
+
+    <TextView android:id="@+id/tvCuit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblCUIT"/>
+
+    <EditText android:id="@+id/edtCuit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
+
+    <TextView android:id="@+id/tvMoneda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblMoneda"/>
+
+    <RadioGroup android:id="@+id/optMoneda"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton android:id="@+id/optDolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblMonedaDolar"/>
+
+        <RadioButton android:id="@+id/optPesos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblMonedaPesos"/>
+    </RadioGroup>
+
+    <TextView android:id="@+id/tvMonto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblMonto"/>
+
+    <EditText android:id="@+id/edtMonto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"/>
+
+    <TextView android:id="@+id/tvDias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblDias"/>
+
+    <SeekBar
+        android:id="@+id/seekDias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView android:id="@+id/tvDiasSeleccionados"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/lblDiasSeleccionados"/>
+
+    <TextView android:id="@+id/tvIntereses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblIntereses"/>
+
+    <LinearLayout
+        android:id="@+id/lytContenedor2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvAvisarVencimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblAvisarVencimiento" />
+
+        <Switch
+            android:id="@+id/swAvisarVencimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ToggleButton android:id="@+id/tbAcreditar"
+        android:textOn="@string/lblAccionVencimientoRenovar"
+        android:textOff="@string/lblAccionVencimientoAcreditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox android:id="@+id/chkAceptoTerminos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblAceptoTerminos"/>
+
+    <Button android:id="@+id/btnHacerPF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lblHacerPF"/>
+
+    <TextView android:id="@+id/tvMensajes"
+        android:layout_weight="1"
+        android:maxLines="6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
