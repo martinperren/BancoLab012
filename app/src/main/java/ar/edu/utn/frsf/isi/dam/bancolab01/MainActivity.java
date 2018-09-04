@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 tvMensajes.setText("");
-                if(!edtMail.getText().toString().matches("") && !edtCuit.getText().toString().matches("") && !(Integer.parseInt(edtCuit.getText().toString())<=0) && !(seekDias.getProgress()<10)){
+                if(!edtMail.getText().toString().matches("") && !edtCuit.getText().toString().matches("") && !(Integer.parseInt(edtCuit.getText().toString())<=0) && !(seekDias.getProgress()<0)){
                     tvMensajes.setTextColor(Color.BLUE);
                     tvMensajes.setText("El plazo fijo se realizo exitosamente\nPlazoFijo{dias="+
                     pf.getDias()+", monto="+pf.getMonto()+",\navisarVencimiento="+pf.getAvisarVencimiento()+
@@ -167,13 +167,13 @@ public class MainActivity extends AppCompatActivity {
                         toast.show();
                         tvMensajes.setText(tvMensajes.getText().toString() + "El monto debe ser mayor que 0\n");
                     }
-                    if (seekDias.getProgress() < 10) {
+                    if (seekDias.getProgress()<0) {
                         Context context = getApplicationContext();
                         CharSequence text = "Error";
                         int duration = Toast.LENGTH_SHORT;
                         Toast toast = Toast.makeText(context, text, duration);
                         toast.show();
-                        tvMensajes.setText(tvMensajes.getText().toString() + "La cantidad de dias de plazo debe ser mayor que 10");
+                        tvMensajes.setText(tvMensajes.getText().toString() + "La cantidad de dias ("+seekDias.getProgress()+")de plazo debe ser mayor que 10");
                     }
                 }
             }
